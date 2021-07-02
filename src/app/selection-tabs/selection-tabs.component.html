@@ -1,0 +1,47 @@
+<section>
+    <d-tabs [(activeTab)]="tabActiveId" type="options" customWidth="100px">
+      <d-tab  [id]="candidate">
+        <ng-template dTabTitle>
+            tab1
+        </ng-template>
+        <ng-template dTabContent>
+          
+          <d-data-table #datatable [dataSource]="basicDataSource" [scrollable]="true" [checkable]="true">
+            <d-column
+              *ngFor="let colOption of dataTableOptions.columns"
+              [field]="colOption.field"
+              [header]="colOption.header"
+              [fieldType]="colOption.fieldType"
+              [width]="'150px'"
+              [fixedLeft]="colOption?.fixedLeft || null"
+              [fixedRight]="colOption?.fixedRight || null"
+            >
+            </d-column>
+          </d-data-table>
+        </ng-template>
+ 
+      </d-tab>
+
+      <d-tab  [id]="selected">
+          <ng-template dTabTitle>
+            tab2
+          </ng-template>
+          <ng-template dTabContent>
+            <d-data-table #datatable [dataSource]="basicDataSource" [scrollable]="true" [checkable]="true">
+                <d-column
+                  *ngFor="let colOption of dataTableOptions.columns"
+                  [field]="colOption.field"
+                  [header]="colOption.header"
+                  [fieldType]="colOption.fieldType"
+                  [width]="'150px'"
+                  [fixedLeft]="colOption?.fixedLeft || null"
+                  [fixedRight]="colOption?.fixedRight || null"
+                >
+                </d-column>
+              </d-data-table>
+          </ng-template>
+      </d-tab>
+
+    </d-tabs>
+</section>
+       
