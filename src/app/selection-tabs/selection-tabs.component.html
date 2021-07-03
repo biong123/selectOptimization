@@ -1,6 +1,6 @@
 <section>
     <d-tabs [(activeTab)]="tabActiveId" type="options" customWidth="100px">
-      <d-tab  [id]="candidate">
+      <d-tab  [id]="'candidate'">
         <ng-template dTabTitle>
             tab1
         </ng-template>
@@ -22,7 +22,7 @@
  
       </d-tab>
 
-      <d-tab  [id]="selected">
+      <d-tab  [id]="'selected'">
           <ng-template dTabTitle>
             tab2
           </ng-template>
